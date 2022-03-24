@@ -4,7 +4,7 @@
 
 - Nome: Isac Lopes Silva
 - Matrícula: 18.1.8135
-- Curso: EC
+- Curso: Eng C
 - Semestre/Ano correntes: 21.2
 - Link para o seu GitHub: [IsacLopes](https://github.com/IsacLopesS)
 
