@@ -2,10 +2,10 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
+- Nome: Isac Lopes SIlva
+- Matrícula: 18.1.8135
+- Curso: Engenharia de Computação
+- Semestre/Ano correntes: 21.2
 - Link para o seu GitHub:
 
 ## [Projeto final:](./Projeto/README.md)
