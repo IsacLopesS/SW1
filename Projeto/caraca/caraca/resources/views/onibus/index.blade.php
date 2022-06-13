@@ -5,6 +5,7 @@
                 <th>assentos livres</th>
                 <th>total de assentos</th>
                 <th>placa</th>
+                <th>viagens</th>
                 <th>exibir</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                 <td>{{$o->num_assentos_disp}}</td>
                 <td>{{$o->num_T_assentos}}</td>
                 <td>{{$o->placa}}</td>
+                <td>{{$o->viagens[0]->destino}}</td>
                 <td><a href="{{route('onibus.show',[$o->id])}}">exibir</a></td>
             </tr>
         @endforeach

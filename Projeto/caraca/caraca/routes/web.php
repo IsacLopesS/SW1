@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Models\Pessoa;
 Route::get('/', function () {
-    return view('buscarPassagem');
+    return view('principal');
 })->name('principal');
 Route::resource('/pessoas',PessoaController::class);
 Route::resource('/onibus', OnibusController::class);

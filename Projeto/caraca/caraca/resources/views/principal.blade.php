@@ -28,6 +28,8 @@
                 <li> <a href="{{route('pessoas.create')}}">cadastrar Pessoa</a></li>
                 <li><a href="{{route('assento.index')}}">ver assentos</a></li>
                 <li><a href="{{route('viagem.create')}}">criar viagem</a></li>
+                <li><a href="{{route('onibus.index')}}">lista de onibus</a></li>
+
             </td>
         </tr>
     </table>

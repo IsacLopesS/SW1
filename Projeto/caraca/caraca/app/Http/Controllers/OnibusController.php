@@ -25,7 +25,7 @@ class OnibusController extends Controller
      */
     public function create()
     {
-        return view('controlaBuscarPassagem.index');
+        //
     }
 
     /**
@@ -36,7 +36,8 @@ class OnibusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        
     }
 
     /**
@@ -47,7 +48,7 @@ class OnibusController extends Controller
      */
     public function show(Onibus $onibus)
     {
-        //
+        
     }
 
     /**
