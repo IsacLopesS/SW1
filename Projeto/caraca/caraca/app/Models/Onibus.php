@@ -15,4 +15,7 @@ class onibus extends Model
     public function assentos(){
         return $this->hasMany(Assento::class,'id_onibus','id_viagem','num_assento');
     }
+    public function viagens(){
+        return $this->hasmany(Viagem::class);
+    }
 }

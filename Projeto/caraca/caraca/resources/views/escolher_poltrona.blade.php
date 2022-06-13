@@ -31,10 +31,14 @@
         <img  src="/imagens/menu2.png">
         <span class="pague" >pague</span>
     </div>
+    
     <div class="corpo">
         <div class="titulo-corpo">escolha sua poltrona</div>
+        {{$viagem}}
+        {{$viagem->onibus}}
         <div class="caixa-de-dados2">
             <div class="center">
+              
                 @for ($i = 1; $i < 44; $i++)
               
                     <a data-toggle="modal" data-target="#ExemploModalCentralizado"

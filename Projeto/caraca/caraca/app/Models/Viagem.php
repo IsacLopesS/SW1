@@ -11,4 +11,8 @@ class Viagem extends Model
     public $timestamps = false;
     protected $table = "viagem";
     protected $guarded = ['id'];
+
+    public function onibus(){
+        return $this->belongsTo(Onibus::class);
+    }
 }
