@@ -35,7 +35,7 @@
     <div class="corpo">
         <div class="titulo-corpo">escolha sua poltrona</div>
         {{$viagem}}
-        {{$viagem->onibus}}
+        {{$viagem->onibus->placa}}
         <div class="caixa-de-dados2">
             <div class="center">
               
