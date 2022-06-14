@@ -4,7 +4,7 @@ use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\OnibusController;
 use App\Http\Controllers\AssentoController;
 use App\Http\Controllers\ViagemController;
-
+use App\Http\Controllers\ViajarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +19,13 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Models\Pessoa;
 Route::get('/', function () {
-    return view('principal');
+    return view('buscarPassagem');
 })->name('principal');
 Route::resource('/pessoas',PessoaController::class);
 Route::resource('/onibus', OnibusController::class);
 Route::resource('/assento', AssentoController::class);
 Route::resource('/viagem', ViagemController::class);
+Route::resource('/viajar', ViajarController::class);
 
 
 

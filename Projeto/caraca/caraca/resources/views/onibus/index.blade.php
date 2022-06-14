@@ -15,7 +15,11 @@
                 <td>{{$o->num_assentos_disp}}</td>
                 <td>{{$o->num_T_assentos}}</td>
                 <td>{{$o->placa}}</td>
-                <td>{{$o->viagens[0]->destino}}</td>
+                @if($o->viagens->count() > 0)
+                    <td>{{$o->viagens[0]->destino}}</td>
+                @else
+                    <td>sem viagem</td>
+                @endif
                 <td><a href="{{route('onibus.show',[$o->id])}}">exibir</a></td>
             </tr>
         @endforeach

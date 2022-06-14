@@ -17,7 +17,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <script type="text/javascript" src="/js/index.js"></script>
+    <?use App\Models\Pessoa;?>
 </head>
 <body>
     <header class="header">
@@ -34,15 +35,14 @@
     
     <div class="corpo">
         <div class="titulo-corpo">escolha sua poltrona</div>
-        {{$viagem}}
-        {{$viagem->onibus->placa}}
+        
         <div class="caixa-de-dados2">
             <div class="center">
               
                 @for ($i = 1; $i < 44; $i++)
               
                     <a data-toggle="modal" data-target="#ExemploModalCentralizado"
-                      class="conteudo " id="{{$i}}" >
+                      class="conteudo " id="{{$i}}" onclick="AssentoEsclhido(id)">
                         {{ $i }}
                     </a> 
   
@@ -52,9 +52,7 @@
                 @endfor 
                 <a class="limpar"></a>                     
             </div>
-            <div class="text-center position-relative bottom-0" >
-                <input class="buscar" type="button" value="prosseguir">
-            </div> 
+            
           <!-- Modal -->
           <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -65,23 +63,37 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  <label for="nome_passageiro">Nome do passageiro:</label><br>
-                  <input type="text" id="nome_passageiro"><br>
-
-                  <label for="">RG:</label><br>
-                  <input type="text" id="rg_passageiro"><br>
-                  <label for="">Poltrona:</label><br>
-                  <input type="text" value="">
-
+                <div>
+                  
+                  <label for="">Insira seu ID:</label><br>
+                  <input type="text" id="idpessoa"><br>
+                  <button onclick="funcao()" class="btn btn-primary">ir</button>
+                  
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Salvar mudanças</button>
-                </div>
+                <form action="{{route('viajar.store')}}" method="POST">
+                    @csrf 
+          
+                    <div class="modal-body">
+                      <label for="">ID:</label><br>
+                      <input type="text" id="id_pessoa" name="id_pessoa"  name="id_pessoa"><br>
+          
+                      <input type="hidden" id="num_assento" name="num_assento" >
+                      <input type="hidden" id="id_viagem" name="id_viagem" value="{{$viagem->id}}" >
+                      <input type="hidden" id="id_onibus" name="id_onibus" value="{{$viagem->onibus->id}}">
+                    </div>
+                    
+                
+                  
+                  
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">enviar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>          
+          </div>  
+
         </div>
     </div>
     <!-- ------------------------------------------------------------------------------------ -->

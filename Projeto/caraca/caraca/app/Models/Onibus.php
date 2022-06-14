@@ -13,7 +13,7 @@ class onibus extends Model
     protected $guarded = ['id'];
 
     public function assentos(){
-        return $this->hasMany(Assento::class,'id_onibus','id_viagem','num_assento');
+        return $this->hasMany(Assento::class, 'id_onibus');
     }
     public function viagens(){
         return $this->hasMany(Viagem::class, 'id_onibus');

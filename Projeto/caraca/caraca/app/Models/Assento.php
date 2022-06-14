@@ -13,6 +13,6 @@ class Assento extends Model
     protected $guarded = ['id'];
 
     public function onibus(){
-        return $this->belongsTo(Onibus::class,'id');
+        return $this->belongsTo(Onibus::class,'id_onibus');
     }
 }

@@ -16,3 +16,17 @@ function CarregarSelect() {
         estados.appendChild(option);
     }*/
 }
+
+function AssentoEsclhido(id){
+    let poltrona = document.getElementById('num_assento')
+    let trocaCor = document.getElementById('id')
+    poltrona.value = id;
+
+    trocaCor.style.backgroundColor = 'red'
+}
+
+function funcao(){
+
+    document.getElementById('id_pessoa').value = document.getElementById('idpessoa').value
+    
+}

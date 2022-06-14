@@ -22,25 +22,31 @@
         <img  src="/imagens/menu3.png">
         <span class="pague" >pague</span>
     </div>
+    @if(session('alguma_mensagem'))
+        <div class="alert alert-success">
+            {{session('alguma_mensagem')}} 
+        </div>
+    @endif
     <div class="corpo">
-        <div class="titulo-corpo">encontre sua passagem de ônibus</div>
+        
+        <div class="titulo-corpo">Dados da sua viagem:</div>
         <div class="caixa-de-dados">
            <h5>
                dados do passageiro:
            </h5>
-           nome: ... <br>
-           rg: ... <br>
-           poltrona escolhida: ... <br>
+           nome: {{$viajar->pessoa->nome}}<br>
+           rg: {{$viajar->pessoa->rg}} <br>
+           poltrona escolhida: {{$viajar->num_assento}} <br>
            <h5>Dados da viagem</h5>
-           origem: ... <br>
-           destino: ... <br>
-           horario de saída: ... <br>
-           valor: ... <br>
+           origem: {{$viajar->viagem->origem}} <br>
+           destino: {{$viajar->viagem->destino}} <br>
+           dia / hora da viagem: {{$viajar->viagem->data_hora}} <br>
+           valor: {{$viajar->viagem->preco}} <br>
 
 
-            <div class="espaco">
-                <input class="buscar" type="button" value="confirmar compra">
-            </div>           
+              
+            
+              
         </div>
         <div class="img-onibus">
             <img  src="/imagens/onibus.png">
