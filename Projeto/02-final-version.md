@@ -23,7 +23,10 @@ Era previsto que as poltronas ocupadas ficassem da cor vermelha, e que ficasse i
 Acho que o maior desafio, é aprender tanto, em tão pouco tempo. Devido ao grande imprevisto da pandemia, que assaltou o planeta recentemente, os semestres foram reduzidos a um tempo menor,forçando assim, a absorção mais acelerada do conteúdo. Durante a implementação, houve muitas dificuldades e imprevitos, no entanto, a facil comunicação com o professor Fernando, atravez do telegram, juntamente com as aulas agendadas e as disponiveis pelo youtube, fizeram toda a diferença para que o trabalho fosse feito, e o aprendizado, maximizado.
 
 ### 5. Instruções para instalação e execução
-<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+Dentro da pasta 'database' exite um arquivo chamado 'caraca.sql'. Este arquivo contem toda a criação do banco de dados, e tambem o povoamento das tabelas.
+Tipo de servidor: MariaDB
+Versão do servidor: 10.4.24-MariaDB
+
 
 ### 6. Referências
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->

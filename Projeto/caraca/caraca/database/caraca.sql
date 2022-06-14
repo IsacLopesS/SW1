@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13-Jun-2022 às 17:51
+-- Tempo de geração: 14-Jun-2022 às 16:54
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -295,7 +295,10 @@ INSERT INTO `pessoas` (`id`, `rg`, `nome`) VALUES
 (4, '24424721', 'Emanuel'),
 (5, '68649760', 'Sage'),
 (6, '24152675', 'Emmett'),
-(8, 'SP-40005780', 'José Coelho');
+(8, 'SP-40005780', 'José Coelho'),
+(10, 'SP 150.840.209', 'Felipe Costa'),
+(11, 'MG 19.115.810', 'Isac Lopes'),
+(12, 'SP 19.005.511', 'Felipe Emanuel');
 
 -- --------------------------------------------------------
 
@@ -332,6 +335,14 @@ CREATE TABLE `viajar` (
   `num_assento` int(11) NOT NULL,
   `id_onibus` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `viajar`
+--
+
+INSERT INTO `viajar` (`id_pessoa`, `id_viagem`, `num_assento`, `id_onibus`) VALUES
+(11, 2, 43, 2),
+(12, 1, 8, 1);
 
 --
 -- Índices para tabelas despejadas
@@ -412,7 +423,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de tabela `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `viagem`
