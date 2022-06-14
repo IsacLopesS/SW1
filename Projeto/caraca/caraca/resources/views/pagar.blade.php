@@ -28,11 +28,12 @@
         </div>
     @endif
     <div class="corpo">
+
         
         <div class="titulo-corpo">Dados da sua viagem:</div>
         <div class="caixa-de-dados">
            <h5>
-               dados do passageiro:
+               dados do passageiro: {{$viajar->pessoa->id}}
            </h5>
            nome: {{$viajar->pessoa->nome}}<br>
            rg: {{$viajar->pessoa->rg}} <br>

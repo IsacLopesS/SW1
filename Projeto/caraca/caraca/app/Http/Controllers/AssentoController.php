@@ -83,7 +83,7 @@ class AssentoController extends Controller
     public function update(UpdateAssentoRequest $request, Assento $assento)
     {
         
-        $assento->fill($request->all()); //atualiza essa pessoa com os dados do request
+        $assento->fill($request->all()); 
         $assento->save();
     }
 

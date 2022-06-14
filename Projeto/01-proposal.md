@@ -23,8 +23,8 @@
     1- o cliente seleciona a origem (onde ele irá pegar o õnibus) e o destino (para onde ele quer ir), dentro das opçoes disponibilizadas pela empresa de transporte.
     2- dentro dos horarios disponiveis pela empresa, o cliente seleciona o horario que desejar para pegar o õnibus.
     3- O cliente deve escolher a(s) poltrona(s) que desejar, dentro das que estao disponiveis.
-    4- Ao selecionar a poltrona, deve abrir uma janela onde o cliente irá digitar seu cpf, rg, telefone, e email.
-    5- após selecionar a poltrona, o cliente será encaminhado para a pagina de pagamento, onde será possivel escolher a forma de pagamento. As opções de pagamento serão pix, cartao de crédito e boleto bancario.
+    4- Ao selecionar a poltrona, deve abrir uma janela onde o cliente irá digitar seu id.
+    5- após selecionar a poltrona, o cliente terá acesso a todas as informações da viagem
 
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
@@ -37,7 +37,7 @@
 ### 4. Protótipo
   O sistema contará basicamente com 3 paginas:
     Pagina 01: Buscar passagem;
-    Pagina 02: Escolher a(s) poltrona(s) e inserir dados pessoais(cpf, rg, celular, email, nome);
+    Pagina 02: Escolher a(s) poltrona(s) e inserir dados pessoais(nome, rg);
     Pagina 03: Informações de pagamento.
 
   As paginas podem ser encontradas em:

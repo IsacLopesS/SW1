@@ -21,7 +21,7 @@
                 <td>{{$v->origem}}</td>
                 <td>{{$v->destino}}</td>
                 <td>{{$v->data_hora}}</td>
-                <td>{{$v->preço}}</td>
+                <td>{{$v->preco}}</td>
                 <td><a href="{{route('viagem.show',[$v->id])}}">escolher</a></td>
             </tr>
         @endforeach

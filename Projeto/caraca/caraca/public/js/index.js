@@ -27,6 +27,6 @@ function AssentoEsclhido(id){
 
 function funcao(){
 
-    document.getElementById('id_pessoa').value = document.getElementById('idpessoa').value
-    
+    let t = document.getElementById('id_pessoa')
+    t.value = document.getElementById('idpessoa').value;
 }

@@ -19,6 +19,6 @@ class Viajar extends Model
         return $this->belongsTo(Viagem::class,'id_viagem');
     }
     public function pessoa(){
-        return $this->belongsTo(Pessoa::class,'id_viagem');
+        return $this->belongsTo(Pessoa::class,'id_pessoa');
     }
 }

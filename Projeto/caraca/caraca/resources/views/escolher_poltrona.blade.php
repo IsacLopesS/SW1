@@ -75,7 +75,7 @@
           
                     <div class="modal-body">
                       <label for="">ID:</label><br>
-                      <input type="text" id="id_pessoa" name="id_pessoa"  name="id_pessoa"><br>
+                      <input type="text" id="id_pessoa"  name="id_pessoa"><br>
           
                       <input type="hidden" id="num_assento" name="num_assento" >
                       <input type="hidden" id="id_viagem" name="id_viagem" value="{{$viagem->id}}" >
