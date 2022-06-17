@@ -13,11 +13,10 @@
 <body>
     <div>
         <h1>doações</h1>
-        <span><a href=""> Area geral</a> |</span>
-        <span><a href=""> Area administrativa</a> |</span>
+        <span><a href="{{route('entidades.index')}}"> Area geral</a> |</span>
+        <div>Area administrativa:</div>
         <span><a href="{{route('items.index')}}"> listar items</a> |</span>
         <span><a href="{{route('items.create')}}"> criar item</a> |</span>
-        <span><a href="{{route('entidades.index')}}"> listar entidades</a> |</span>
         <span><a href="{{route('entidades.create')}}"> criar entidades</a> |</span>
         <span><a href="{{route('coletas.index')}}"> listar coletas</a> |</span>
         <span><a href="{{route('coletas.create')}}"> criar coletas</a> |</span>

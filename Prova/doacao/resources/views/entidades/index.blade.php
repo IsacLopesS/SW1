@@ -1,7 +1,7 @@
 @extends('principal')
 
 @section('corpo')
-   
+
     <table class="table table-borderd table-hover table-scripted">
         <thead class="thead-dark">
             <tr>
@@ -26,26 +26,47 @@
     </table>
 
     <h3>Área Geral</h3>
-<table class="table table-borderd table-hover table-scripted">
-        <thead class="thead-dark">
-            <th>Entidade</th>
-            <th>coletas</th>
+    <table class="table table-borderd table-hover table-scripted">
+            <thead class="thead-dark">
+                <th>Entidade</th>
+                <th>itens</th>
 
-        </thead>
-        <tbody>
-        @foreach ($entidades as $e)
-            <tr>
-                <td>{{$e->nome}}</td>
-                
-                @foreach ($e->coletas as $c)
-                    <td>{{$c->quantidade}}</td>
+            </thead>
+            <tbody>
+            @foreach ($entidades as $e)
+                <tr>
+                    <td>{{$e->nome}}</td>
+                    <td>{{$e->qtd($e)}}</td>
+                </tr>
+            @endforeach
+            </tbody>
+            <tfoot>
+                <th>total geral</th>
+                <th>{{$entidades[0]->totalGeral($entidades)}}</th>
+            </tfoot>
+    </table>
+
+    <table class="table table-borderd table-hover table-scripted">
+            <thead class="thead-dark">
+                <th>item</th>
+                <th>quantidade</th>
+                <th>porcentagem</th>
+            </thead>
+            <tbody>
+                @foreach ($items as $item)
+                <tr>
+                    <td>{{$item->descricao}}</td>
+                    <td>{{$item->qtd($item)}}</td>
+                    <td>{{$item->porcentagem($item, $items)}}%</td>
+                </tr>
+                    
                 @endforeach
-            </tr>
-        @endforeach
-        </tbody>
-        <tfoot>
-            <th>total geral</th>
-            <th>4444</th>
-        </tfoot>
-</table>
+            </tbody>
+
+            <tfoot>
+                <th>Total Geral</th>
+                <th>{{$items[0]->totalqtd($items)}}</th>
+                <th> 100%</th>
+            </tfoot>
+    </table>
 @endsection

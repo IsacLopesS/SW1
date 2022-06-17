@@ -5,6 +5,7 @@ use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ColetaController;
 use App\Http\Controllers\EntidadeController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +23,5 @@ Route::get('/', function () {
 Route::resource('/coletas',ColetaController::class);
 Route::resource('/entidades',EntidadeController::class);
 Route::resource('/items',ItemController::class);
+
 

@@ -6,6 +6,7 @@ use App\Models\Entidade;
 use App\Http\Requests\StoreEntidadeRequest;
 use App\Http\Requests\UpdateEntidadeRequest;
 use Illuminate\Http\Request;
+use App\Models\Item;
 
 
 class EntidadeController extends Controller
@@ -18,7 +19,9 @@ class EntidadeController extends Controller
     public function index()
     {
         $entidades = Entidade::OrderBy('id')->get();
-        return view('entidades.index',['entidades'=>$entidades]);
+        $items = Item::OrderBy('id')->get();
+
+        return view('entidades.index',['entidades'=>$entidades,'items'=>$items]);
     }
 
     /**
